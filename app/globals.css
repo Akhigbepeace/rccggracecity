@@ -1,15 +1,32 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: #5d3fd3;
+  --accent: #f3e9dc;
+  --dark-text: #1a1a1a;
+  --light-gray: #f8f9fa;
+
+  --font-heading: "DM Serif Display", serif;
+  --font-body: "Inter", sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-accent: var(--accent);
+  --color-darkText: var(--dark-text);
+  --color-lightGray: var(--light-gray);
+
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-serif);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -22,5 +39,12 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
 }
