@@ -7,14 +7,11 @@ import {
   MapPin,
   Phone,
   Mail,
-  Clock,
   Facebook,
   Instagram,
   Youtube,
   Twitter,
-  Heart,
   ChevronUp,
-  Send,
 } from "lucide-react";
 
 const Footer = () => {
@@ -65,9 +62,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">RCCG</p>
-                  <h3 className="text-2xl font-[var(--font-heading)] text-white">
-                    Grace City
-                  </h3>
+                  <h3 className="text-2xl   text-white">Grace City</h3>
                 </div>
               </div>
 
@@ -81,7 +76,7 @@ const Footer = () => {
                 <div className="flex items-start gap-3">
                   <MapPin
                     size={18}
-                    className="text-[var(--primary)] mt-1 flex-shrink-0"
+                    className="text-primary mt-1 flex-shrink-0"
                   />
                   <div>
                     <p className="text-gray-300 text-sm">
@@ -93,18 +88,12 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Phone
-                    size={18}
-                    className="text-[var(--primary)] flex-shrink-0"
-                  />
+                  <Phone size={18} className="text-primary flex-shrink-0" />
                   <p className="text-gray-300 text-sm">+234 (0) 812 345 6789</p>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail
-                    size={18}
-                    className="text-[var(--primary)] flex-shrink-0"
-                  />
+                  <Mail size={18} className="text-primary flex-shrink-0" />
                   <p className="text-gray-300 text-sm">
                     hello@gracecityabuja.org
                   </p>
@@ -114,7 +103,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="space-y-6">
-              <h4 className="text-xl font-[var(--font-heading)] text-white border-b border-gray-700 pb-3">
+              <h4 className="text-xl   text-white border-b border-gray-700 pb-3">
                 About
               </h4>
               <ul className="space-y-3">
@@ -122,7 +111,7 @@ const Footer = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-[var(--primary)] transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
+                      className="text-gray-300 hover:text-primary transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
                     >
                       {link.name}
                     </Link>
@@ -133,7 +122,7 @@ const Footer = () => {
 
             {/* Ministries */}
             <div className="space-y-6">
-              <h4 className="text-xl font-[var(--font-heading)] text-white border-b border-gray-700 pb-3">
+              <h4 className="text-xl   text-white border-b border-gray-700 pb-3">
                 Ministries
               </h4>
               <ul className="space-y-3">
@@ -141,7 +130,7 @@ const Footer = () => {
                   <li key={ministry.name}>
                     <Link
                       href={ministry.href}
-                      className="text-gray-300 hover:text-[var(--primary)] transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
+                      className="text-gray-300 hover:text-primary transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
                     >
                       {ministry.name}
                     </Link>
@@ -152,7 +141,7 @@ const Footer = () => {
 
             {/* Resources & Newsletter */}
             <div className="space-y-6">
-              <h4 className="text-xl font-[var(--font-heading)] text-white border-b border-gray-700 pb-3">
+              <h4 className="text-xl   text-white border-b border-gray-700 pb-3">
                 Resources
               </h4>
               <ul className="space-y-3 mb-8">
@@ -160,7 +149,7 @@ const Footer = () => {
                   <li key={resource.name}>
                     <Link
                       href={resource.href}
-                      className="text-gray-300 hover:text-[var(--primary)] transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
+                      className="text-gray-300 hover:text-primary transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
                     >
                       {resource.name}
                     </Link>
@@ -202,7 +191,7 @@ const Footer = () => {
               {/* Scroll to Top */}
               <button
                 onClick={scrollToTop}
-                className="bg-[var(--primary)] hover:bg-purple-600 p-3 rounded-full transition-all duration-200 transform hover:scale-110"
+                className="bg-primary hover:bg-purple-600 p-3 rounded-full transition-all duration-200 transform hover:scale-110"
               >
                 <ChevronUp size={20} />
               </button>

@@ -3,13 +3,10 @@
 import React, { useState } from "react";
 import {
   Calendar,
-  Heart,
   Share2,
   ChevronLeft,
   ChevronRight,
   Check,
-  User,
-  MessageSquare,
   Send,
 } from "lucide-react";
 
@@ -55,30 +52,28 @@ export const DailyReadingContent = () => {
       {/* Header */}
       <div className="text-center border-b border-gray-100 pb-6">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <Calendar className="text-[var(--primary)]" size={20} />
+          <Calendar className="text-primary" size={20} />
           <span className="text-sm font-medium text-gray-600">
             Day {todaysReading.dayNumber} of 365
           </span>
         </div>
-        <h3 className="text-lg font-semibold text-[var(--dark-text)]">
+        <h3 className="text-lg font-semibold text-dark-text">
           {todaysReading.date}
         </h3>
       </div>
 
       {/* Scripture */}
       <div className="text-center space-y-4">
-        <h4 className="text-xl font-[var(--font-heading)] text-[var(--primary)]">
-          {todaysReading.reference}
-        </h4>
-        <blockquote className="text-2xl font-[var(--font-heading)] text-[var(--dark-text)] leading-relaxed italic">
-          "{todaysReading.passage}"
+        <h4 className="text-xl   text-primary">{todaysReading.reference}</h4>
+        <blockquote className="text-2xl   text-dark-text leading-relaxed italic">
+          <q>{todaysReading.passage}</q>
         </blockquote>
       </div>
 
       {/* Reflection */}
       <div className="space-y-3">
-        <h5 className="font-semibold text-[var(--dark-text)] text-lg">
-          Today's Reflection
+        <h5 className="font-semibold text-dark-text text-lg">
+          Today&apos;s Reflection
         </h5>
         <p className="text-gray-700 leading-relaxed">
           {todaysReading.reflection}
@@ -87,9 +82,7 @@ export const DailyReadingContent = () => {
 
       {/* Prayer */}
       <div className="bg-[var(--accent)] rounded-lg p-4 space-y-3">
-        <h5 className="font-semibold text-[var(--dark-text)]">
-          Prayer for Today
-        </h5>
+        <h5 className="font-semibold text-dark-text">Prayer for Today</h5>
         <p className="text-gray-700 italic leading-relaxed">
           {todaysReading.prayer}
         </p>
@@ -108,8 +101,8 @@ export const DailyReadingContent = () => {
           <div
             className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors duration-200 ${
               isMarkedRead
-                ? "bg-[var(--primary)] border-[var(--primary)]"
-                : "border-gray-300 hover:border-[var(--primary)]"
+                ? "bg-primary border-primary"
+                : "border-gray-300 hover:border-primary"
             }`}
           >
             {isMarkedRead && <Check size={12} className="text-white" />}
@@ -130,7 +123,7 @@ export const DailyReadingContent = () => {
 
           <button
             onClick={handleShare}
-            className="flex items-center gap-2 px-4 py-2 bg-[var(--primary)] text-white rounded-full hover:bg-purple-600 transition-colors duration-200"
+            className="flex items-center gap-2 px-4 py-2 bg-primary text-white rounded-full hover:bg-purple-600 transition-colors duration-200"
           >
             <Share2 size={16} />
             Share
@@ -195,9 +188,7 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
           <Check size={32} className="text-green-600" />
         </div>
         <div className="space-y-3">
-          <h3 className="text-2xl font-[var(--font-heading)] text-[var(--dark-text)]">
-            Thank You for Sharing!
-          </h3>
+          <h3 className="text-2xl   text-dark-text">Thank You for Sharing!</h3>
           <p className="text-gray-600 leading-relaxed">
             Your story has been submitted and will be reviewed by our team. We
             appreciate you sharing how God has worked in your life.
@@ -205,7 +196,7 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
         </div>
         <button
           onClick={onClose}
-          className="bg-[var(--primary)] text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-600 transition-colors duration-200"
+          className="bg-primary text-white px-6 py-3 rounded-full font-semibold hover:bg-purple-600 transition-colors duration-200"
         >
           Close
         </button>
@@ -228,7 +219,7 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
                 name="name"
                 value={formData.name}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-200"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                 placeholder="Your name"
                 required={!formData.isAnonymous}
               />
@@ -242,7 +233,7 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-200"
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
                 placeholder="your@email.com"
               />
             </div>
@@ -260,8 +251,8 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
             <div
               className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors duration-200 ${
                 formData.isAnonymous
-                  ? "bg-[var(--primary)] border-[var(--primary)]"
-                  : "border-gray-300 hover:border-[var(--primary)]"
+                  ? "bg-primary border-primary"
+                  : "border-gray-300 hover:border-primary"
               }`}
             >
               {formData.isAnonymous && (
@@ -281,7 +272,7 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
             name="category"
             value={formData.category}
             onChange={handleInputChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-200"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
             required
           >
             <option value="">Select a category</option>
@@ -303,7 +294,7 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
             value={formData.story}
             onChange={handleInputChange}
             rows={6}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-200 resize-none"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200 resize-none"
             placeholder="Share how God has worked in your life..."
             required
           />
@@ -324,8 +315,8 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
           <div
             className={`w-5 h-5 rounded border-2 flex items-center justify-center transition-colors duration-200 mt-0.5 ${
               formData.allowContact
-                ? "bg-[var(--primary)] border-[var(--primary)]"
-                : "border-gray-300 hover:border-[var(--primary)]"
+                ? "bg-primary border-primary"
+                : "border-gray-300 hover:border-primary"
             }`}
           >
             {formData.allowContact && (
@@ -350,7 +341,7 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
           <button
             type="submit"
             disabled={isSubmitting || formData.story.length < 50}
-            className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-[var(--primary)] text-white rounded-full font-semibold hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+            className="flex-1 flex items-center justify-center gap-2 px-6 py-3 bg-primary text-white rounded-full font-semibold hover:bg-purple-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
           >
             {isSubmitting ? (
               <>

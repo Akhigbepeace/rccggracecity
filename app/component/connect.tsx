@@ -75,11 +75,11 @@ const ConnectSection = () => {
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl md:text-6xl font-[var(--font-heading)] text-[var(--dark-text)] mb-6">
+          <h2 className="text-4xl md:text-6xl text-dark-text mb-6">
             Connect With Us
           </h2>
-          <div className="w-16 h-0.5 bg-[var(--primary)] mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 font-[var(--font-body)] max-w-3xl mx-auto leading-relaxed">
+          <div className="w-16 h-0.5 bg-primary mx-auto mb-6"></div>
+          <p className="text-xl text-gray-600   max-w-3xl mx-auto leading-relaxed">
             Join our vibrant community both online and offline. Stay connected,
             be inspired, and grow together in faith.
           </p>
@@ -93,10 +93,10 @@ const ConnectSection = () => {
             data-aos-duration="800"
           >
             <div className="space-y-4">
-              <h3 className="text-2xl font-[var(--font-heading)] text-[var(--dark-text)] mb-6">
+              <h3 className="text-2xl text-dark-text mb-6">
                 Follow Our Journey
               </h3>
-              <p className="text-gray-600 font-[var(--font-body)] leading-relaxed">
+              <p className="text-gray-600   leading-relaxed">
                 Stay updated with our latest messages, events, and community
                 highlights across all platforms.
               </p>
@@ -118,7 +118,7 @@ const ConnectSection = () => {
                         <social.icon className="text-white" size={24} />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-[var(--dark-text)] text-lg">
+                        <h4 className="font-semibold text-dark-text text-lg">
                           {social.handle}
                         </h4>
                         <p className="text-sm text-gray-600">
@@ -127,7 +127,7 @@ const ConnectSection = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="text-lg font-bold text-[var(--primary)]">
+                      <div className="text-lg font-bold text-primary">
                         {social.followers}
                       </div>
                       <div className="text-xs text-gray-500">followers</div>
@@ -145,12 +145,10 @@ const ConnectSection = () => {
             data-aos-duration="800"
           >
             <div className="space-y-4">
-              <h3 className="text-2xl font-[var(--font-heading)] text-[var(--dark-text)] mb-6">
-                Visit & Connect
-              </h3>
-              <p className="text-gray-600 font-[var(--font-body)] leading-relaxed">
-                We'd love to meet you in person! Here's everything you need to
-                plan your visit or get in touch.
+              <h3 className="text-2xl text-dark-text mb-6">Visit & Connect</h3>
+              <p className="text-gray-600  leading-relaxed">
+                We&apos;d love to meet you in person! Here&apos;s everything you
+                need to plan your visit or get in touch.
               </p>
             </div>
 
@@ -163,20 +161,20 @@ const ConnectSection = () => {
                   data-aos-delay={200 + index * 100}
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-[var(--accent)] rounded-xl flex items-center justify-center group-hover:bg-[var(--primary)] group-hover:text-white transition-all duration-300">
+                    <div className="w-12 h-12 bg-[var(--accent)] rounded-xl flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
                       <contact.icon
                         size={20}
-                        className="text-[var(--primary)] group-hover:text-white"
+                        className="text-primary group-hover:text-white"
                       />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-[var(--dark-text)] mb-1">
+                      <h4 className="font-semibold text-dark-text mb-1">
                         {contact.label}
                       </h4>
                       <p className="text-gray-700 mb-3 font-medium">
                         {contact.value}
                       </p>
-                      <button className="text-[var(--primary)] font-medium hover:text-purple-600 transition-colors duration-200 text-sm">
+                      <button className="text-primary font-medium hover:text-purple-600 transition-colors duration-200 text-sm">
                         {contact.action} →
                       </button>
                     </div>
@@ -186,15 +184,13 @@ const ConnectSection = () => {
             </div>
 
             {/* First Time Visitor CTA */}
-            <div className="bg-gradient-to-br from-[var(--primary)] to-purple-600 rounded-2xl p-8 text-white text-center">
-              <h4 className="text-xl font-[var(--font-heading)] mb-3">
-                First Time Visitor?
-              </h4>
+            <div className="bg-gradient-to-br from-primary to-purple-600 rounded-2xl p-8 text-white text-center">
+              <h4 className="text-xl mb-3">First Time Visitor?</h4>
               <p className="text-purple-100 mb-6 leading-relaxed">
-                We'd love to welcome you personally and help you feel at home in
-                our community.
+                We&apos;d love to welcome you personally and help you feel at
+                home in our community.
               </p>
-              <button className="bg-white text-[var(--primary)] px-6 py-3 rounded-full font-semibold hover:bg-gray-50 transition-colors duration-200">
+              <button className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-gray-50 transition-colors duration-200">
                 Plan Your Visit
               </button>
             </div>
@@ -209,12 +205,10 @@ const ConnectSection = () => {
         >
           <div className="bg-white rounded-3xl p-8 md:p-12 shadow-xl max-w-4xl mx-auto">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <div className="w-12 h-12 bg-[var(--primary)] rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                 <MessageCircle className="text-white" size={24} />
               </div>
-              <h3 className="text-3xl font-[var(--font-heading)] text-[var(--dark-text)]">
-                Stay in the Loop
-              </h3>
+              <h3 className="text-3xl text-dark-text">Stay in the Loop</h3>
             </div>
             <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-2xl mx-auto">
               Get weekly encouragement, event updates, and exclusive content
@@ -224,9 +218,9 @@ const ConnectSection = () => {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-6 py-4 border border-gray-300 rounded-full focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-200"
+                className="flex-1 px-6 py-4 border border-gray-300 rounded-full focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-200"
               />
-              <button className="bg-[var(--primary)] text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-600 transition-colors duration-200 whitespace-nowrap">
+              <button className="bg-primary text-white px-8 py-4 rounded-full font-semibold hover:bg-purple-600 transition-colors duration-200 whitespace-nowrap">
                 Subscribe
               </button>
             </div>

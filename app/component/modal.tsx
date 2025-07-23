@@ -23,7 +23,7 @@ const Modal = (props: ModalProps) => {
     showCloseButton = true,
     closable = true,
   } = props;
-  
+
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape" && closable) {
@@ -69,11 +69,7 @@ const Modal = (props: ModalProps) => {
         {/* Header */}
         {(title || showCloseButton) && (
           <div className="flex items-center justify-between p-6 border-b border-gray-100">
-            {title && (
-              <h2 className="text-2xl font-[var(--font-heading)] text-[var(--dark-text)]">
-                {title}
-              </h2>
-            )}
+            {title && <h2 className="text-2xl   text-dark-text">{title}</h2>}
             {showCloseButton && closable && (
               <button
                 onClick={onClose}

@@ -14,7 +14,7 @@ const dailyContent = [
       "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, to give you hope and a future.",
     reference: "Jeremiah 29:11",
     theme: "Hope & Future",
-    color: "from-[var(--primary)] to-purple-700",
+    color: "from-primary to-purple-700",
   },
   {
     type: "teaching",
@@ -63,17 +63,17 @@ const ScriptureInspirationHub = () => {
   return (
     <section className="py-20 px-4 md:px-20 bg-gradient-to-br from-[var(--accent)] to-white relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[var(--primary)]/10 to-transparent rounded-full transform translate-x-48 -translate-y-48"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full transform translate-x-48 -translate-y-48"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-purple-500/10 to-transparent rounded-full transform -translate-x-36 translate-y-36"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-purple-600 rounded-full flex items-center justify-center">
+            <div className="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center">
               <BookOpen className="text-white" size={24} />
             </div>
-            <h1 className="text-4xl md:text-5xl text-[var(--dark-text)]">
+            <h1 className="text-4xl md:text-5xl text-dark-text">
               Daily Inspiration
             </h1>
           </div>
@@ -147,10 +147,10 @@ const ScriptureInspirationHub = () => {
               data-aos="fade-up"
               data-aos-delay={300 + index * 100}
             >
-              <div className="w-16 h-16 bg-gradient-to-br from-[var(--primary)] to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="text-white" size={24} />
               </div>
-              <h3 className="text-3xl font-bold text-[var(--dark-text)] mb-2">
+              <h3 className="text-3xl font-bold text-dark-text mb-2">
                 {stat.value}
               </h3>
               <p className="text-gray-600 font-medium">{stat.label}</p>
@@ -166,12 +166,10 @@ const ScriptureInspirationHub = () => {
         >
           <div className="bg-white rounded-2xl p-8 shadow-lg">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-[var(--primary)] to-purple-600 rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center">
                 <Calendar className="text-white" size={20} />
               </div>
-              <h3 className="text-2xl font-[var(--font-heading)] text-[var(--dark-text)]">
-                Daily Devotional
-              </h3>
+              <h3 className="text-2xl   text-dark-text">Daily Devotional</h3>
             </div>
             <p className="text-gray-600 mb-6">
               Join thousands in our 365-day journey through scripture with
@@ -179,9 +177,9 @@ const ScriptureInspirationHub = () => {
             </p>
             <button
               onClick={() => setDailyReadingModal(true)}
-              className="bg-gradient-to-r from-[var(--primary)] to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-gradient-to-r from-primary to-purple-600 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
             >
-              Start Today's Reading
+              Start Today&apos;s Reading
             </button>
           </div>
 
@@ -190,13 +188,13 @@ const ScriptureInspirationHub = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-slate-600 to-slate-800 rounded-full flex items-center justify-center">
                 <Heart className="text-white" size={20} />
               </div>
-              <h3 className="text-2xl font-[var(--font-heading)] text-[var(--dark-text)]">
+              <h3 className="text-2xl   text-dark-text">
                 Community Reflections
               </h3>
             </div>
             <p className="text-gray-600 mb-6">
-              Share how God's word has impacted your life and be encouraged by
-              others' testimonies.
+              Share how God&apos;s word has impacted your life and be encouraged
+              by others&apos; testimonies.
             </p>
             <button
               onClick={() => setShareStoryModal(true)}

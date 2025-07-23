@@ -18,21 +18,21 @@ const AboutSection = () => {
           >
             {/* Simple heading */}
             <div className="space-y-6">
-              <h2 className="text-5xl font-[var(--font-heading)] text-[var(--dark-text)] leading-tight">
+              <h2 className="text-5xl text-dark-text leading-tight">
                 Who We Are
               </h2>
-              <div className="w-16 h-0.5 bg-[var(--primary)]"></div>
+              <div className="w-16 h-0.5 bg-primary"></div>
             </div>
 
             {/* Clean content */}
             <div className="space-y-8">
-              <p className="text-base md:text-lg text-gray-700 font-[var(--font-body)] leading-relaxed">
-                GraceCity is not just a church — it's a movement of grace, a
-                sanctuary for souls, and a beacon of purpose in the heart of
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                GraceCity is not just a church — it&apos;s a movement of grace,
+                a sanctuary for souls, and a beacon of purpose in the heart of
                 Abuja.
               </p>
 
-              <p className="text-lg text-gray-600 font-[var(--font-body)] leading-relaxed">
+              <p className="text-lg text-gray-600 leading-relaxed">
                 With dynamic worship, life-transforming teachings, and a heart
                 for community, we are committed to raising leaders, empowering
                 families, and revealing Christ to our generation.
@@ -40,10 +40,12 @@ const AboutSection = () => {
             </div>
 
             {/* Elegant quote */}
-            <div className="border-l-2 border-[var(--primary)] pl-8 py-4">
-              <blockquote className="text-xl italic text-gray-700 font-[var(--font-body)] mb-4">
-                "We're not just building a church — we're raising a people of
-                purpose."
+            <div className="border-l-2 border-primary pl-8 py-4">
+              <blockquote className="text-xl italic text-gray-700 mb-4">
+                <q>
+                  We&apos;re not just building a church — we&apos;re raising a
+                  people of purpose.
+                </q>
               </blockquote>
               <cite className="text-base text-gray-500 font-medium not-italic">
                 — Pastor Michael & Pastor (Mrs.) Agatha Nzekwe
