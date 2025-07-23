@@ -1,56 +1,214 @@
+"use client";
+
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Facebook,
+  Instagram,
+  Youtube,
+  Twitter,
+  Heart,
+  ChevronUp,
+  Send,
+} from "lucide-react";
 
 const Footer = () => {
+  const quickLinks = [
+    { name: "About Us", href: "/about" },
+    { name: "Our Pastors", href: "/pastors" },
+    { name: "What We Believe", href: "/beliefs" },
+    { name: "Our History", href: "/history" },
+  ];
+
+  const ministries = [
+    { name: "Children's Ministry", href: "/ministries/children" },
+    { name: "Youth Ministry", href: "/ministries/youth" },
+    { name: "Women's Ministry", href: "/ministries/women" },
+    { name: "Men's Ministry", href: "/ministries/men" },
+    { name: "Worship Team", href: "/ministries/worship" },
+  ];
+
+  const resources = [
+    { name: "Sermons", href: "/sermons" },
+    { name: "Bible Study", href: "/bible-study" },
+    { name: "Events", href: "/events" },
+    { name: "Gallery", href: "/gallery" },
+    { name: "Blog", href: "/blog" },
+  ];
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
-    <footer className="bg-[color:var(--color-primary)] text-white">
-      <div className="container mx-auto px-4 py-10 grid md:grid-cols-3 gap-8 text-sm">
-        {/* Left Column */}
-        <div>
-          <h4 className="font-heading text-lg mb-2">GraceCity</h4>
-          <p className="text-[0.875rem] opacity-80">
-            A place of excellence, purpose, and divine transformation.
-          </p>
+    <footer className="relative bg-gradient-to-br from-[var(--dark-text)] to-gray-900 text-white overflow-hidden">
+      <div className="relative z-10">
+        {/* Main Footer Content */}
+        <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
+          <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-12">
+            {/* Church Info */}
+            <div className="lg:col-span-1 space-y-6">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-white rounded-full p-2">
+                  <Image
+                    src="/logo.png"
+                    alt="Grace City Logo"
+                    width={32}
+                    height={32}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div>
+                  <p className="text-gray-400 text-sm">RCCG</p>
+                  <h3 className="text-2xl font-[var(--font-heading)] text-white">
+                    Grace City
+                  </h3>
+                </div>
+              </div>
+
+              <p className="text-gray-300 leading-relaxed">
+                A movement of grace, a sanctuary for souls, and a beacon of
+                purpose in the heart of Abuja.
+              </p>
+
+              {/* Contact Info */}
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <MapPin
+                    size={18}
+                    className="text-[var(--primary)] mt-1 flex-shrink-0"
+                  />
+                  <div>
+                    <p className="text-gray-300 text-sm">
+                      Plot 123, Gwarinpa District
+                      <br />
+                      Abuja, Nigeria
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Phone
+                    size={18}
+                    className="text-[var(--primary)] flex-shrink-0"
+                  />
+                  <p className="text-gray-300 text-sm">+234 (0) 812 345 6789</p>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <Mail
+                    size={18}
+                    className="text-[var(--primary)] flex-shrink-0"
+                  />
+                  <p className="text-gray-300 text-sm">
+                    hello@gracecityabuja.org
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="space-y-6">
+              <h4 className="text-xl font-[var(--font-heading)] text-white border-b border-gray-700 pb-3">
+                About
+              </h4>
+              <ul className="space-y-3">
+                {quickLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-300 hover:text-[var(--primary)] transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Ministries */}
+            <div className="space-y-6">
+              <h4 className="text-xl font-[var(--font-heading)] text-white border-b border-gray-700 pb-3">
+                Ministries
+              </h4>
+              <ul className="space-y-3">
+                {ministries.map((ministry) => (
+                  <li key={ministry.name}>
+                    <Link
+                      href={ministry.href}
+                      className="text-gray-300 hover:text-[var(--primary)] transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
+                    >
+                      {ministry.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Resources & Newsletter */}
+            <div className="space-y-6">
+              <h4 className="text-xl font-[var(--font-heading)] text-white border-b border-gray-700 pb-3">
+                Resources
+              </h4>
+              <ul className="space-y-3 mb-8">
+                {resources.map((resource) => (
+                  <li key={resource.name}>
+                    <Link
+                      href={resource.href}
+                      className="text-gray-300 hover:text-[var(--primary)] transition-colors duration-200 text-sm hover:translate-x-1 transform inline-block"
+                    >
+                      {resource.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
-        {/* Middle Column */}
-        <div>
-          <h4 className="font-semibold mb-2">Quick Links</h4>
-          <ul className="space-y-1">
-            <li>
-              <Link href="/about" className="hover:underline">
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link href="/sermons" className="hover:underline">
-                Sermons
-              </Link>
-            </li>
-            <li>
-              <Link href="/events" className="hover:underline">
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link href="/contact" className="hover:underline">
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </div>
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-700">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 py-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              {/* Copyright */}
+              <div className="flex items-center gap-2 text-gray-400 text-sm">
+                <span>&copy; {new Date().getFullYear()} RCCG Grace City .</span>
+              </div>
 
-        {/* Right Column */}
-        <div>
-          <h4 className="font-semibold mb-2">Visit Us</h4>
-          <p>GraceCity Church, Abuja</p>
-          <p>Sunday Services: 9:00 AM</p>
-          <p>Wednesdays: 6:00 PM</p>
-        </div>
-      </div>
+              {/* Social Links */}
+              <div className="flex items-center gap-4">
+                <span className="text-gray-400 text-sm mr-2">Follow us:</span>
+                {[
+                  { icon: Facebook, href: "#", color: "hover:text-blue-500" },
+                  { icon: Instagram, href: "#", color: "hover:text-pink-500" },
+                  { icon: Youtube, href: "#", color: "hover:text-red-500" },
+                  { icon: Twitter, href: "#", color: "hover:text-blue-400" },
+                ].map(({ icon: Icon, href, color }, index) => (
+                  <Link
+                    key={index}
+                    href={href}
+                    className={`p-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-all duration-200 transform hover:scale-110 ${color}`}
+                  >
+                    <Icon size={18} />
+                  </Link>
+                ))}
+              </div>
 
-      <div className="bg-[color:var(--color-primary)] border-t border-white/10 text-center py-4 text-xs">
-        &copy; {new Date().getFullYear()} RCCG GraceCity Church Abuja. All
-        rights reserved.
+              {/* Scroll to Top */}
+              <button
+                onClick={scrollToTop}
+                className="bg-[var(--primary)] hover:bg-purple-600 p-3 rounded-full transition-all duration-200 transform hover:scale-110"
+              >
+                <ChevronUp size={20} />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   );

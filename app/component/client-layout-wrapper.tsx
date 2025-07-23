@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./navbar";
@@ -11,16 +12,21 @@ type ClientLayoutWrapperProp = {
 };
 
 const ClientLayoutWrapper = ({ children }: ClientLayoutWrapperProp) => {
+  const pathname = usePathname();
+
   useEffect(() => {
     AOS.init({ once: true });
   }, []);
 
+  const isRoot = pathname === "/";
+
   return (
     <body className="font-body bg-white text-darkText">
-      <Navbar />
+      {!isRoot && <Navbar />}
       <main className="min-h-screen">{children}</main>
-      <Footer />
+      {!isRoot && <Footer />}
     </body>
   );
 };
+
 export default ClientLayoutWrapper;

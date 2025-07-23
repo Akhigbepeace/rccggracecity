@@ -1,5 +1,4 @@
 import "./globals.css";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import { Inter } from "next/font/google";
 import { DM_Serif_Display } from "next/font/google";
