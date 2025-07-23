@@ -78,8 +78,8 @@ const ScriptureInspirationHub = () => {
             </h1>
           </div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Start each day with God's word and be inspired by our community's
-            reflections
+            Start each day with God&apos;s word and be inspired by our
+            community&apos;s reflections
           </p>
         </div>
 
@@ -113,7 +113,7 @@ const ScriptureInspirationHub = () => {
               </div>
 
               <blockquote className="text-2xl md:text-3xl leading-relaxed mb-6">
-                "{currentContent.content}"
+                <q>{currentContent.content}</q>
               </blockquote>
 
               <div className="flex items-center justify-between">
