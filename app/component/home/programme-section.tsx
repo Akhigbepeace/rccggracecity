@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaPrayingHands, FaBible, FaPeopleArrows } from "react-icons/fa";
+import { FaPrayingHands, FaBible } from "react-icons/fa";
 import { MdOutlineFamilyRestroom } from "react-icons/md";
 
 const programs = [
@@ -9,25 +9,22 @@ const programs = [
     title: "Sunday Worship",
     description:
       "Join us every Sunday for spirit-filled worship, powerful word, and divine encounters.",
+    time: "Sundays · 8:00 AM",
     icon: <FaPrayingHands className="text-4xl text-indigo-600" />,
   },
   {
-    title: "Bible Study",
+    title: "Digging Deep",
     description:
       "Dig deeper into the Word every Wednesday. Grow in truth, grace, and wisdom.",
+    time: "Tuesdays · 6:00 PM",
     icon: <FaBible className="text-4xl text-green-600" />,
   },
   {
-    title: "Youth & Teens",
+    title: "Faith Clinic",
     description:
-      "Empowering the next generation through mentorship, teachings, and kingdom service.",
+      "A prayer-focused service where faith is stirred, lives are healed, and destinies are transformed through the power of God.",
+    time: "Thursdays · 6:00 PM",
     icon: <MdOutlineFamilyRestroom className="text-4xl text-pink-500" />,
-  },
-  {
-    title: "Evangelism",
-    description:
-      "Taking the gospel beyond the walls. Join our outreach teams every Saturday.",
-    icon: <FaPeopleArrows className="text-4xl text-yellow-500" />,
   },
 ];
 
@@ -44,7 +41,7 @@ const ProgramsSection = () => {
         </p>
       </div>
 
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {programs.map((program, index) => (
           <div
             key={index}
@@ -56,6 +53,9 @@ const ProgramsSection = () => {
             <h3 className="text-xl font-semibold text-gray-800">
               {program.title}
             </h3>
+            <p className="mt-1 text-sm text-gray-500 font-medium italic">
+              {program.time}
+            </p>
             <p className="mt-2 text-sm text-gray-600">{program.description}</p>
           </div>
         ))}

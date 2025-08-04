@@ -73,7 +73,7 @@ const ScriptureInspirationHub = () => {
             <div className="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center">
               <BookOpen className="text-white" size={24} />
             </div>
-            <h1 className="text-4xl md:text-5xl text-dark-text">
+            <h1 className="text-4xl md:text-5xl text-darkText">
               Daily Inspiration
             </h1>
           </div>
@@ -150,7 +150,7 @@ const ScriptureInspirationHub = () => {
               <div className="w-16 h-16 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <stat.icon className="text-white" size={24} />
               </div>
-              <h3 className="text-3xl font-bold text-dark-text mb-2">
+              <h3 className="text-3xl font-bold text-darkText mb-2">
                 {stat.value}
               </h3>
               <p className="text-gray-600 font-medium">{stat.label}</p>
@@ -169,7 +169,7 @@ const ScriptureInspirationHub = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-primary to-purple-600 rounded-full flex items-center justify-center">
                 <Calendar className="text-white" size={20} />
               </div>
-              <h3 className="text-2xl   text-dark-text">Daily Devotional</h3>
+              <h3 className="text-2xl   text-darkText">Daily Devotional</h3>
             </div>
             <p className="text-gray-600 mb-6">
               Join thousands in our 365-day journey through scripture with
@@ -188,7 +188,7 @@ const ScriptureInspirationHub = () => {
               <div className="w-12 h-12 bg-gradient-to-br from-slate-600 to-slate-800 rounded-full flex items-center justify-center">
                 <Heart className="text-white" size={20} />
               </div>
-              <h3 className="text-2xl   text-dark-text">
+              <h3 className="text-2xl   text-darkText">
                 Community Reflections
               </h3>
             </div>
