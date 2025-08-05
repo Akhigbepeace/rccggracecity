@@ -42,8 +42,14 @@ const Footer = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const socialMediaLink = [
+    { icon: Facebook, href: "#", color: "hover:text-blue-500" },
+    { icon: Instagram, href: "#", color: "hover:text-pink-500" },
+    { icon: Youtube, href: "#", color: "hover:text-red-500" },
+    { icon: Twitter, href: "#", color: "hover:text-blue-400" },
+  ];
   return (
-    <footer className="relative bg-gradient-to-br from-[var(--dark-text)] to-gray-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-[var(--darkText)] to-gray-900 text-white overflow-hidden">
       <div className="relative z-10">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
@@ -80,8 +86,7 @@ const Footer = () => {
                   />
                   <div>
                     <p className="text-gray-300 text-sm">
-                      Plot 123, Gwarinpa District
-                      <br />
+                      Along Bannex-Gwarinpa Expressway, Opp. Next Cash & Carry,
                       Abuja, Nigeria
                     </p>
                   </div>
@@ -172,12 +177,7 @@ const Footer = () => {
               {/* Social Links */}
               <div className="flex items-center gap-4">
                 <span className="text-gray-400 text-sm mr-2">Follow us:</span>
-                {[
-                  { icon: Facebook, href: "#", color: "hover:text-blue-500" },
-                  { icon: Instagram, href: "#", color: "hover:text-pink-500" },
-                  { icon: Youtube, href: "#", color: "hover:text-red-500" },
-                  { icon: Twitter, href: "#", color: "hover:text-blue-400" },
-                ].map(({ icon: Icon, href, color }, index) => (
+                {socialMediaLink.map(({ icon: Icon, href, color }, index) => (
                   <Link
                     key={index}
                     href={href}

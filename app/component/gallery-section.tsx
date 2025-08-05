@@ -1,13 +1,10 @@
 import Image from "next/image";
 
-const galleryImages = [
-  "/gallery/img1.jpg",
-  "/gallery/img2.jpg",
-  "/gallery/img3.jpg",
-  "/gallery/img4.jpg",
-  "/gallery/img5.jpg",
-  "/gallery/img6.jpg",
-];
+// Generate image paths dynamically
+const galleryImages = Array.from(
+  { length: 20 },
+  (_, i) => `/gallery/image-${i + 1}.png`
+);
 
 const GallerySection = () => {
   // Duplicate the images array to create seamless loop

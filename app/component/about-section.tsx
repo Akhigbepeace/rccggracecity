@@ -17,11 +17,11 @@ const AboutSection = () => {
             data-aos-duration="800"
           >
             {/* Simple heading */}
-            <div className="space-y-6">
-              <h2 className="text-5xl text-dark-text leading-tight">
+            <div>
+              <h2 className="text-5xl text-darkText leading-tight">
                 Who We Are
               </h2>
-              <div className="w-16 h-0.5 bg-primary"></div>
+              <div className="w-20 h-0.5 bg-primary"></div>
             </div>
 
             {/* Clean content */}
@@ -40,14 +40,14 @@ const AboutSection = () => {
             </div>
 
             {/* Elegant quote */}
-            <div className="border-l-2 border-primary pl-8 py-4">
-              <blockquote className="text-xl italic text-gray-700 mb-4">
+            <div className="border-l-4 rounded-xl border-primary p-4 ml-5">
+              <blockquote className="text-lg italic text-gray-700 mb-4">
                 <q>
                   We&apos;re not just building a church — we&apos;re raising a
                   people of purpose.
                 </q>
               </blockquote>
-              <cite className="text-base text-gray-500 font-medium not-italic">
+              <cite className="text-sm text-gray-500 font-medium not-italic">
                 — Pastor Michael & Pastor (Mrs.) Agatha Nzekwe
               </cite>
             </div>

@@ -57,7 +57,7 @@ export const DailyReadingContent = () => {
             Day {todaysReading.dayNumber} of 365
           </span>
         </div>
-        <h3 className="text-lg font-semibold text-dark-text">
+        <h3 className="text-lg font-semibold text-darkText">
           {todaysReading.date}
         </h3>
       </div>
@@ -65,14 +65,14 @@ export const DailyReadingContent = () => {
       {/* Scripture */}
       <div className="text-center space-y-4">
         <h4 className="text-xl   text-primary">{todaysReading.reference}</h4>
-        <blockquote className="text-2xl   text-dark-text leading-relaxed italic">
+        <blockquote className="text-2xl   text-darkText leading-relaxed italic">
           <q>{todaysReading.passage}</q>
         </blockquote>
       </div>
 
       {/* Reflection */}
       <div className="space-y-3">
-        <h5 className="font-semibold text-dark-text text-lg">
+        <h5 className="font-semibold text-darkText text-lg">
           Today&apos;s Reflection
         </h5>
         <p className="text-gray-700 leading-relaxed">
@@ -82,7 +82,7 @@ export const DailyReadingContent = () => {
 
       {/* Prayer */}
       <div className="bg-[var(--accent)] rounded-lg p-4 space-y-3">
-        <h5 className="font-semibold text-dark-text">Prayer for Today</h5>
+        <h5 className="font-semibold text-darkText">Prayer for Today</h5>
         <p className="text-gray-700 italic leading-relaxed">
           {todaysReading.prayer}
         </p>
@@ -188,7 +188,7 @@ export const ShareStoryContent = ({ onClose }: { onClose: () => void }) => {
           <Check size={32} className="text-green-600" />
         </div>
         <div className="space-y-3">
-          <h3 className="text-2xl   text-dark-text">Thank You for Sharing!</h3>
+          <h3 className="text-2xl   text-darkText">Thank You for Sharing!</h3>
           <p className="text-gray-600 leading-relaxed">
             Your story has been submitted and will be reviewed by our team. We
             appreciate you sharing how God has worked in your life.
