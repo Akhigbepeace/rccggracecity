@@ -30,7 +30,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent backdrop-blur-sm"
+        scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-3">
@@ -51,10 +51,15 @@ export default function Navbar() {
                   key={href}
                   href={href}
                   className={`relative transition duration-300 font-medium ${
-                    isHome && !scrolled
+                    !scrolled
                       ? "text-white hover:text-gray-200"
                       : "text-black hover:text-primary"
                   } group`}
+                  // className={`relative transition duration-300 font-medium ${
+                  //   isHome && !scrolled
+                  //     ? "text-white hover:text-gray-200"
+                  //     : "text-black hover:text-primary"
+                  // } group`}
                 >
                   {label}
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary group-hover:w-full transition-all duration-300"></span>

@@ -43,7 +43,7 @@ const HeroCarousel = () => {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center text-center text-white px-6">
+              <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white px-6">
                 <h1 className="text-4xl md:text-6xl font-heading drop-shadow-md mb-4">
                   {slide.title}
                 </h1>

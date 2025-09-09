@@ -30,7 +30,7 @@ const AboutPage = () => {
       role: "Asst. Pastor-in-charge/MD",
     },
     {
-      pic: "/micheal.png",
+      pic: "/mummy-bishop.png",
       name: "Dcns. Joyce Jeff Adeyanju",
       role: "Asst. MD",
     },
@@ -42,9 +42,9 @@ const AboutPage = () => {
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-lightGray to-white">
         {/* Background image */}
         <div className="absolute inset-0">
-          <div className="h-[600px] w-full relative">
+          <div className="h-[800px] w-full relative">
             <Image
-              src="/church.png"
+              src="/about-hero.png"
               alt="Grace City Background"
               fill
               className="w-full h-full object-cover object-center"
@@ -151,13 +151,14 @@ const AboutPage = () => {
 
                 <div className="relative z-10 flex flex-col items-center text-center space-y-6">
                   <div className="relative">
-                    <div className="w-32 h-32 rounded-full overflow-hidden ring-4 ring-white shadow-lg group-hover:ring-primary/20 transition-all duration-500">
+                    <div className="w-64 h-64 rounded-full overflow-hidden ring-4 ring-white shadow-lg group-hover:ring-primary/20 transition-all duration-500">
                       <Image
                         src={leadership.pic}
                         alt={leadership.name}
-                        width={128}
-                        height={128}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        width={300}
+                        height={300}
+                        // objectPosition="top center"
+                        className="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
 
@@ -181,8 +182,6 @@ const AboutPage = () => {
             </div>
           ))}
         </div>
-        {/* <div className="relative ">
-        </div> */}
       </section>
 
       {/* Gallery */}
@@ -240,7 +239,7 @@ const AboutPage = () => {
               className="gallery-swiper"
             >
               {duplicatedImages.map((image, index) => (
-                <SwiperSlide key={image} className="pb-12">
+                <SwiperSlide key={index} className="pb-12">
                   <div className="group cursor-pointer">
                     {/* Main Image Card */}
                     <div className="relative rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-2">

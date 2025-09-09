@@ -10,25 +10,22 @@ import Image from "next/image";
 
 const events = [
   {
+    title: "Youth Manifestation Sunday",
+    date: "September 13, 2025",
+    time: "9:00 PM",
+    image: "/assets/images/events/event3.jpg",
+  },
+  {
     title: "Prophetic Worship Night",
     date: "August 12, 2025",
     time: "7:00 PM",
-    location: "Glory Chapel Auditorium",
     image: "/assets/images/events/event1.jpg",
   },
   {
     title: "Sunday Celebration Service",
     date: "August 17, 2025",
     time: "9:00 AM",
-    location: "Main Sanctuary",
     image: "/assets/images/events/event2.jpg",
-  },
-  {
-    title: "Youth Summit",
-    date: "September 5, 2025",
-    time: "4:00 PM",
-    location: "Youth Hall",
-    image: "/assets/images/events/event3.jpg",
   },
 ];
 
@@ -88,9 +85,6 @@ const UpcomingEvents = () => {
                 </p>
                 <p className="text-sm text-gray-600 mb-1">
                   <strong>Time:</strong> {event.time}
-                </p>
-                <p className="text-sm text-gray-600">
-                  <strong>Location:</strong> {event.location}
                 </p>
               </div>
             </div>
