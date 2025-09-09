@@ -4,9 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 const navItems = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/home" },
   { label: "About", href: "/about" },
   { label: "Sermons", href: "/sermons" },
   { label: "Events", href: "/events" },
@@ -17,11 +18,14 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
+  const pathname = usePathname();
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 30);
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const isHome = pathname === "/";
 
   return (
     <header
@@ -47,9 +51,9 @@ export default function Navbar() {
                   key={href}
                   href={href}
                   className={`relative transition duration-300 font-medium ${
-                    scrolled
-                      ? "text-black hover:text-primary"
-                      : "text-white hover:text-gray-200"
+                    isHome && !scrolled
+                      ? "text-white hover:text-gray-200"
+                      : "text-black hover:text-primary"
                   } group`}
                 >
                   {label}

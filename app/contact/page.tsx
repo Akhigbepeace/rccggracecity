@@ -127,7 +127,7 @@ const ContactPage = () => {
                 <input
                   type="text"
                   placeholder="Your Name"
-                  className="w-full border border-gray-300 rounded-lg px-5 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
+                  className="w-full foc border border-gray-300 rounded-lg px-5 py-3 focus:ring-2 focus:ring-primary focus:outline-none"
                 />
                 <input
                   type="email"
