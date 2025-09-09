@@ -4,15 +4,15 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  MapPin,
-  Phone,
-  Mail,
-  Facebook,
-  Instagram,
-  Youtube,
-  Twitter,
-  ChevronUp,
-} from "lucide-react";
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaTwitter,
+  FaChevronUp,
+} from "react-icons/fa";
 
 const Footer = () => {
   const quickLinks = [
@@ -43,11 +43,28 @@ const Footer = () => {
   };
 
   const socialMediaLink = [
-    { icon: Facebook, href: "#", color: "hover:text-blue-500" },
-    { icon: Instagram, href: "#", color: "hover:text-pink-500" },
-    { icon: Youtube, href: "#", color: "hover:text-red-500" },
-    { icon: Twitter, href: "#", color: "hover:text-blue-400" },
+    {
+      icon: FaFacebookF,
+      href: "https://web.facebook.com/rccggracecityabuja?_rdc=1&_rdr#",
+      color: "hover:text-blue-500",
+    },
+    {
+      icon: FaInstagram,
+      href: "https://www.instagram.com/rccggracecityabuja/",
+      color: "hover:text-pink-500",
+    },
+    {
+      icon: FaYoutube,
+      href: "https://www.youtube.com/@rccggracecityabuja",
+      color: "hover:text-red-500",
+    },
+    {
+      icon: FaTwitter,
+      href: "https://twitter.com/gracecityabuja",
+      color: "hover:text-blue-400",
+    },
   ];
+
   return (
     <footer className="relative bg-gradient-to-br from-[var(--darkText)] to-gray-900 text-white overflow-hidden">
       <div className="relative z-10">
@@ -68,7 +85,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">RCCG</p>
-                  <h3 className="text-2xl   text-white">Grace City</h3>
+                  <h3 className="text-2xl text-white">Grace City</h3>
                 </div>
               </div>
 
@@ -80,7 +97,7 @@ const Footer = () => {
               {/* Contact Info */}
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <MapPin
+                  <FaMapMarkerAlt
                     size={18}
                     className="text-primary mt-1 flex-shrink-0"
                   />
@@ -93,12 +110,15 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Phone size={18} className="text-primary flex-shrink-0" />
+                  <FaPhone size={18} className="text-primary flex-shrink-0" />
                   <p className="text-gray-300 text-sm">+234 (0) 812 345 6789</p>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <Mail size={18} className="text-primary flex-shrink-0" />
+                  <FaEnvelope
+                    size={18}
+                    className="text-primary flex-shrink-0"
+                  />
                   <p className="text-gray-300 text-sm">
                     hello@gracecityabuja.org
                   </p>
@@ -108,7 +128,7 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div className="space-y-6">
-              <h4 className="text-xl   text-white border-b border-gray-700 pb-3">
+              <h4 className="text-xl text-white border-b border-gray-700 pb-3">
                 About
               </h4>
               <ul className="space-y-3">
@@ -127,7 +147,7 @@ const Footer = () => {
 
             {/* Ministries */}
             <div className="space-y-6">
-              <h4 className="text-xl   text-white border-b border-gray-700 pb-3">
+              <h4 className="text-xl text-white border-b border-gray-700 pb-3">
                 Ministries
               </h4>
               <ul className="space-y-3">
@@ -144,9 +164,9 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Resources & Newsletter */}
+            {/* Resources */}
             <div className="space-y-6">
-              <h4 className="text-xl   text-white border-b border-gray-700 pb-3">
+              <h4 className="text-xl text-white border-b border-gray-700 pb-3">
                 Resources
               </h4>
               <ul className="space-y-3 mb-8">
@@ -171,7 +191,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               {/* Copyright */}
               <div className="flex items-center gap-2 text-gray-400 text-sm">
-                <span>&copy; {new Date().getFullYear()} RCCG Grace City .</span>
+                <span>&copy; {new Date().getFullYear()} RCCG Grace City.</span>
               </div>
 
               {/* Social Links */}
@@ -193,7 +213,7 @@ const Footer = () => {
                 onClick={scrollToTop}
                 className="bg-primary hover:bg-purple-600 p-3 rounded-full transition-all duration-200 transform hover:scale-110"
               >
-                <ChevronUp size={20} />
+                <FaChevronUp size={20} />
               </button>
             </div>
           </div>
