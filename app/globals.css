@@ -12,7 +12,7 @@
   --dark-text: #1a1a1a;
   --light-gray: #f8f9fa;
 
-  --font-heading: "DM Serif Display", serif;
+  --font-heading: "Playfair Display", serif;
   --font-body: "Inter", sans-serif;
 }
 
@@ -25,8 +25,8 @@
   --color-darkText: var(--dark-text);
   --color-lightGray: var(--light-gray);
 
-  --font-sans: var(--font-geist-sans);
-  --font-heading: var(--font-serif);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
 }
 
 @media (prefers-color-scheme: dark) {

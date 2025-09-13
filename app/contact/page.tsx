@@ -2,6 +2,7 @@
 
 import React from "react";
 import { MapPin, Clock, Phone, Mail, Send } from "lucide-react";
+import HeroSection from "../component/shared/hero-section";
 
 const ContactPage = () => {
   const contactInfo = [
@@ -83,20 +84,16 @@ const ContactPage = () => {
   };
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-gradient-to-br from-[var(--light-gray)] to-white">
-      <div className="max-w-7xl mx-auto space-y-24">
-        {/* Section Header */}
-        <div className="text-center" data-aos="fade-up">
-          <h2 className="text-4xl md:text-6xl text-darkText mb-4">
-            Contact Grace City
-          </h2>
-          <div className="w-16 h-0.5 bg-primary mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Whether it&apos;s your first time, you&apos;re returning, or simply
-            want to connect — we&apos;re here for you.
-          </p>
-        </div>
+    <section className="bg-gradient-to-br from-[var(--light-gray)] to-white">
+      <HeroSection
+        image="/banners/contact.png"
+        headingOne="Contact"
+        headingTwo="Grace City"
+        paragraph=" Whether it's your first time, you're returning, or simply
+          want to connect — we're here for you."
+      />
 
+      <div className="max-w-7xl mx-auto space-y-24 py-20 px-6 md:px-12 ">
         {/* Map and Contact Form Side by Side */}
         <div className="grid lg:grid-cols-2 gap-12" data-aos="fade-up">
           {/* Embedded Map */}
@@ -205,7 +202,7 @@ const ContactPage = () => {
           </div>
           <button
             onClick={handlePlanVisit}
-            className="mt-6 bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-50 transition"
+            className="mt-6 cursor-pointer bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-50 transition"
           >
             Plan Your Visit
           </button>

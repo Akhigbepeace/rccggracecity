@@ -1,35 +1,33 @@
 "use client";
 
 import "aos/dist/aos.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import Image from "next/image";
+import Link from "next/link";
 
 const events = [
   {
-    title: "Youth Manifestation Sunday",
-    date: "September 13, 2025",
-    time: "9:00 PM",
-    image: "/assets/images/events/event3.jpg",
+    title: "Victoriously Settled",
+    date: "September 28, 29 & 30, 2025",
+    time: "9:00 AM & 6:00 PM",
+    image: "/events/victoriously-settled.png",
   },
   {
-    title: "Prophetic Worship Night",
-    date: "August 12, 2025",
-    time: "7:00 PM",
-    image: "/assets/images/events/event1.jpg",
-  },
-  {
-    title: "Sunday Celebration Service",
-    date: "August 17, 2025",
+    title: "Thanksgiving Service",
+    date: "October 5, 2025",
     time: "9:00 AM",
-    image: "/assets/images/events/event2.jpg",
+    image: "/events/thanksgiving.png",
+  },
+  {
+    title: "Youth Convention",
+    date: "October 19, 2025",
+    time: "9:00 AM",
+    image: "/events/youth-convention.png",
   },
 ];
 
 const UpcomingEvents = () => {
+  const displayedEvents = events.slice(0, 3);
+
   return (
     <section
       className="py-20 px-4 md:px-10 lg:px-20 bg-gray-50"
@@ -44,53 +42,51 @@ const UpcomingEvents = () => {
         </p>
       </div>
 
-      <Swiper
-        spaceBetween={30}
-        slidesPerView={1}
-        autoplay={{ delay: 4000 }}
-        navigation
-        pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-        }}
-        modules={[Navigation, Pagination, Autoplay]}
-        className="w-full"
-      >
-        {events.map((event, index) => (
-          <SwiperSlide key={index}>
-            <div
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-              className="bg-white shadow-xl rounded-xl overflow-hidden h-full"
-            >
-              <div className="w-full h-[192px] relative">
-                <Image
-                  src={event.image}
-                  alt={event.title}
-                  // width={500}
-                  // height={192}
-                  fill
-                  unoptimized={event.image.startsWith("http")}
-                />
-              </div>
-
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold text-darkText mb-2">
-                  {event.title}
-                </h3>
-                <p className="text-sm text-gray-600 mb-1">
-                  <strong>Date:</strong> {event.date}
-                </p>
-                <p className="text-sm text-gray-600 mb-1">
-                  <strong>Time:</strong> {event.time}
-                </p>
-              </div>
+      {/* Grid Layout */}
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {displayedEvents.map((event, index) => (
+          <div
+            key={index}
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+            className="bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition duration-300"
+          >
+            <div className="w-full h-[200px] relative">
+              <Image
+                src={event.image}
+                alt={event.title}
+                fill
+                className="object-cover"
+                unoptimized={event.image.startsWith("http")}
+              />
             </div>
-          </SwiperSlide>
+
+            <div className="p-6">
+              <h3 className="text-2xl font-bold text-darkText mb-2">
+                {event.title}
+              </h3>
+              <p className="text-sm text-gray-600 mb-1">
+                <strong>Date:</strong> {event.date}
+              </p>
+              <p className="text-sm text-gray-600 mb-1">
+                <strong>Time:</strong> {event.time}
+              </p>
+            </div>
+          </div>
         ))}
-      </Swiper>
+      </div>
+
+      {/* View More Button */}
+      {events.length > 3 && (
+        <div className="text-center mt-12">
+          <Link
+            href="/events"
+            className="inline-block bg-primary text-white px-6 py-3 rounded-lg font-medium hover:bg-primary/90 transition"
+          >
+            View More Events
+          </Link>
+        </div>
+      )}
     </section>
   );
 };

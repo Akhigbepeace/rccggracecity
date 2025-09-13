@@ -2,7 +2,7 @@ import Image from "next/image";
 
 // Generate image paths dynamically
 const galleryImages = Array.from(
-  { length: 20 },
+  { length: 21 },
   (_, i) => `/gallery/image-${i + 1}.png`
 );
 
@@ -26,6 +26,7 @@ const GallerySection = () => {
               alt={`Gallery ${(index % galleryImages.length) + 1}`}
               width={320}
               height={240}
+              loading="lazy"
               className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 ease-in-out"
             />
           </div>

@@ -1,19 +1,19 @@
 import "./globals.css";
 import "aos/dist/aos.css";
-import { Inter } from "next/font/google";
-import { DM_Serif_Display } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import { ReactNode } from "react";
 import ClientLayoutWrapper from "./component/client-layout-wrapper";
 
-const dmSerif = DM_Serif_Display({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-heading",
-  weight: "400",
+  weight: ["400", "600", "700"],
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
+  weight: ["300", "400", "500", "600"],
 });
 
 export const metadata = {
@@ -62,18 +62,17 @@ export const metadata = {
   },
   icons: {
     icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
-  themeColor: "#6B46C1",
 };
 
 type RootLayoutProp = { children: ReactNode };
 
 export default function RootLayout({ children }: RootLayoutProp) {
   return (
-    <html lang="en" className={`${dmSerif.variable} ${inter.variable}`}>
-      <body>
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+      <body className="font-body bg-white text-darkText">
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
