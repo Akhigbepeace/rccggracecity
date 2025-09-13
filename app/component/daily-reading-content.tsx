@@ -1,18 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import {
-  Calendar,
-  Share2,
-  ChevronLeft,
-  ChevronRight,
-  Check,
-  Send,
-} from "lucide-react";
+import { Calendar, Share2, Check, Send } from "lucide-react";
 
 // Daily Reading Modal Content
 export const DailyReadingContent = () => {
-  const [isMarkedRead, setIsMarkedRead] = useState(false);
+  // const [isMarkedRead, setIsMarkedRead] = useState(false);
 
   // This would typically come from your API/database
   const todaysReading = {
@@ -91,7 +84,7 @@ export const DailyReadingContent = () => {
       {/* Actions */}
       <div className="flex flex-col gap-4 pt-4 border-t border-gray-100">
         {/* Mark as Read */}
-        <label className="flex items-center gap-3 cursor-pointer">
+        {/* <label className="flex items-center gap-3 cursor-pointer">
           <input
             type="checkbox"
             checked={isMarkedRead}
@@ -108,18 +101,18 @@ export const DailyReadingContent = () => {
             {isMarkedRead && <Check size={12} className="text-white" />}
           </div>
           <span className="text-gray-700">Mark as read</span>
-        </label>
+        </label> */}
 
         {/* Bottom Actions */}
         <div className="flex items-center justify-between">
-          <div className="flex gap-2">
+          {/* <div className="flex gap-2">
             <button className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200">
               <ChevronLeft size={20} className="text-gray-500" />
             </button>
             <button className="p-2 hover:bg-gray-100 rounded-full transition-colors duration-200">
               <ChevronRight size={20} className="text-gray-500" />
             </button>
-          </div>
+          </div> */}
 
           <button
             onClick={handleShare}

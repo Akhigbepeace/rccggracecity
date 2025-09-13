@@ -8,7 +8,7 @@ const slides = [
   {
     src: "/church.png",
     title: "Welcome to Grace City",
-    sub: "Where grace meets purpose and lives are transformed.",
+    sub: "A vibrant RCCG parish and Zonal HQ where lives are transformed by The Word, Worship & God's Grace.",
   },
   {
     src: "/worship.png",
@@ -43,8 +43,8 @@ const HeroCarousel = () => {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-black/80 flex flex-col items-center justify-center text-center text-white px-6">
-                <h1 className="text-4xl md:text-6xl font-heading drop-shadow-md mb-4">
+              <div className="absolute inset-0 bg-black/70 flex flex-col items-center justify-center text-center text-white px-6">
+                <h1 className="text-4xl md:text-6xl drop-shadow-md mb-4">
                   {slide.title}
                 </h1>
                 <p className="text-base md:text-lg max-w-2xl text-white/90 font-body">

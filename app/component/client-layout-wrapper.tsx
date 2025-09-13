@@ -4,8 +4,8 @@ import { useEffect, ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Navbar from "./navbar";
-import Footer from "./footer";
+import Navbar from "./shared/navbar";
+import Footer from "./shared/footer";
 
 type ClientLayoutWrapperProp = {
   children: ReactNode;

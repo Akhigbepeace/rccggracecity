@@ -20,11 +20,11 @@ const MissionVision = () => {
       <div className="group bg-white border-2 rounded-3xl p-10 transition-transform duration-500 ease-in-out hover:-translate-y-2 relative overflow-hidden">
         <div className="absolute -top-10 -right-10 w-32 h-32 bg-gradient-to-br from-primary/20 to-purple-400/20 rounded-full blur-2xl transform transition-transform duration-700 ease-in-out group-hover:scale-125" />
 
-        <div className="relative z-10 flex flex-col items-center text-center">
+        <div className="relative flex flex-col items-center text-center">
           <div className="mb-6 p-4 bg-gradient-to-r from-primary/10 to-purple-500/10 rounded-full">
             {icon}
           </div>
-          <h3 className="font-heading text-2xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
+          <h3 className="text-2xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-500">
             {title}
           </h3>
           <p className="text-gray-700 leading-relaxed">{content}</p>
@@ -40,11 +40,11 @@ const MissionVision = () => {
       <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-purple-200/30 rounded-full blur-3xl animate-pulse" />
 
       <div
-        className="relative z-10 container mx-auto px-6 md:px-12 text-center mb-16"
+        className="relative container mx-auto px-6 md:px-12 text-center mb-16"
         data-aos="fade-up"
         data-aos-duration="1500"
       >
-        <h2 className="text-4xl md:text-5xl font-heading mb-4">
+        <h2 className="text-4xl md:text-5xl mb-4">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-primary">
             Mission, Vision & Values
           </span>
@@ -55,7 +55,7 @@ const MissionVision = () => {
         </p>
       </div>
 
-      <div className="relative z-10 container mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-10">
+      <div className="relative container mx-auto px-6 md:px-12 grid md:grid-cols-3 gap-10">
         <Card
           title="Our Mission"
           content="To make disciples of all nations by preaching the Gospel and living out Christ's teachings in love and service."

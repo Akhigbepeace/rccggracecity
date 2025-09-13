@@ -35,8 +35,8 @@ const dailyContent = [
 ];
 
 const weeklyStats = [
-  { label: "Lives Touched", value: "2,847", icon: Heart },
-  { label: "Prayers Shared", value: "1,205", icon: BookOpen },
+  { label: "Lives Touched", value: "2K+", icon: Heart },
+  { label: "Prayers Shared", value: "1K+", icon: BookOpen },
   { label: "Testimonies", value: "89", icon: Sunrise },
 ];
 
@@ -66,7 +66,7 @@ const ScriptureInspirationHub = () => {
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full transform translate-x-48 -translate-y-48"></div>
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-purple-500/10 to-transparent rounded-full transform -translate-x-36 translate-y-36"></div>
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative">
         {/* Section Header */}
         <div className="text-center mb-16" data-aos="fade-up">
           <div className="flex items-center justify-center gap-3 mb-4">
