@@ -3,6 +3,7 @@ import "aos/dist/aos.css";
 import { Inter, Playfair_Display } from "next/font/google";
 import { ReactNode } from "react";
 import ClientLayoutWrapper from "./component/client-layout-wrapper";
+import { Analytics } from "@vercel/analytics/next";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -73,6 +74,7 @@ export default function RootLayout({ children }: RootLayoutProp) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <body className="font-body bg-white text-darkText">
+        <Analytics />
         <ClientLayoutWrapper>{children}</ClientLayoutWrapper>
       </body>
     </html>
