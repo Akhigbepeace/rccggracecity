@@ -6,22 +6,16 @@ import Link from "next/link";
 
 const events = [
   {
-    title: "Victoriously Settled",
-    date: "September 28, 29 & 30, 2025",
-    time: "9:00 AM & 6:00 PM",
-    image: "/events/victoriously-settled.png",
-  },
-  {
-    title: "Thanksgiving Service",
-    date: "October 5, 2025",
-    time: "9:00 AM",
-    image: "/events/thanksgiving.png",
-  },
-  {
     title: "Youth Convention",
     date: "October 19, 2025",
     time: "9:00 AM",
     image: "/events/youth-convention.png",
+  },
+  {
+    title: "Family Sunday",
+    date: "October 26, 2025",
+    time: "9:00 AM",
+    image: "/events/family-sunday.png",
   },
 ];
 
@@ -51,7 +45,7 @@ const UpcomingEvents = () => {
             data-aos-delay={index * 100}
             className="bg-white shadow-xl rounded-xl overflow-hidden hover:shadow-2xl transition duration-300"
           >
-            <div className="w-full h-[200px] relative">
+            <div className="w-full h-[300px] relative">
               <Image
                 src={event.image}
                 alt={event.title}
