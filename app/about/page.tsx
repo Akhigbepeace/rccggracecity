@@ -15,17 +15,17 @@ const AboutPage = () => {
     {
       pic: "/agatha.png",
       name: "Pastor Mrs. Agatha Nzekwe",
-      role: "Pastor-in-charge",
+      role: "W/Pastor-in-charge",
     },
     {
       pic: "/bishop.png",
       name: "Jeff Adeyanju (Bishop)",
-      role: "Asst. Pastor/MD",
+      role: "Asst. Pastor",
     },
     {
       pic: "/mummy-bishop.png",
       name: "Dcns. Joyce Jeff Adeyanju",
-      role: "Asst. MD",
+      role: "W/Asst. Pastor",
     },
   ];
 
@@ -97,7 +97,7 @@ const AboutPage = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {leaderships.map((leadership, i) => (
             <div
               key={i}

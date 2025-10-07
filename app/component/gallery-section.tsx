@@ -12,6 +12,7 @@ const GallerySection = () => {
 
   return (
     <section className="py-16 px-4 md:px-20 bg-gray-50 overflow-hidden">
+      {/* <div className="flex"> */}
       <div className="flex animate-marquee-rtl">
         {duplicatedImages.map((img, index) => (
           <div
@@ -24,8 +25,8 @@ const GallerySection = () => {
             <Image
               src={img}
               alt={`Gallery ${(index % galleryImages.length) + 1}`}
-              width={320}
-              height={240}
+              width={400}
+              height={300}
               loading="lazy"
               className="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 ease-in-out"
             />

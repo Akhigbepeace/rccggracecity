@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import SectionTitle from "./shared/section-title";
 
 const AboutSection = () => {
   return (
@@ -17,12 +18,7 @@ const AboutSection = () => {
             data-aos-duration="800"
           >
             {/* Simple heading */}
-            <div>
-              <h2 className="text-5xl text-darkText leading-tight">
-                Who We Are
-              </h2>
-              <div className="w-20 h-0.5 bg-primary"></div>
-            </div>
+            <SectionTitle title="Who We Are" />
 
             {/* Clean content */}
             <div className="space-y-8">
@@ -35,7 +31,7 @@ const AboutSection = () => {
               <p className="text-lg text-gray-600 leading-relaxed">
                 With dynamic worship, life-transforming teachings, and a heart
                 for community, we are committed to raising leaders, empowering
-                families, and revealing Christ to our generation.
+                families, and revealing Christ to our generation. We are big enough to accomodate you and small enough to know you
               </p>
             </div>
 

@@ -66,7 +66,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-gradient-to-br from-[var(--darkText)] to-gray-900 text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-background to-gray-900 text-white overflow-hidden">
       <div className="relative">
         {/* Main Footer Content */}
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-16">
