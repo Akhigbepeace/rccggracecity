@@ -112,15 +112,15 @@ const Footer = () => {
                   <p className="text-gray-300 text-sm">+234 (0) 812 345 6789</p>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <Link href="mailto:gracecityzone@gmail.com" className="flex items-center gap-3">
                   <FaEnvelope
                     size={18}
                     className="text-primary flex-shrink-0"
                   />
                   <p className="text-gray-300 text-sm">
-                    hello@gracecityabuja.org
+                    gracecityzone@gmail.com
                   </p>
-                </div>
+                </Link>
               </div>
             </div>
 
