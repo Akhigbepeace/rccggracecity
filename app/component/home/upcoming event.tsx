@@ -15,7 +15,7 @@ const events = [
     title: "Envagelism and Outreach",
     date: "October 25, 2025",
     time: "9:00 AM",
-    image: "/events/youth-convention.png",
+    image: "/events/october-evangelism.png",
   },
   {
     title: "Family Sunday",
