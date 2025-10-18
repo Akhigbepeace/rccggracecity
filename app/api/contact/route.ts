@@ -9,7 +9,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: "GraceCity Website <onboarding@resend.dev>",
-      // to: "gracecityofficial@gmail.com", // Change to your church email
+      // to: "gracecityzone@gmail.com", // Change to your church email
       to: "peaceakhigbe18@gmail.com",
       subject: `New Message from ${name}`,
       html: `
