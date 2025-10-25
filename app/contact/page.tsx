@@ -33,7 +33,7 @@ const ContactPage = () => {
       icon: Phone,
       type: "phone",
       label: "Call Us",
-      value: "+234 (0) 812 345 6789",
+      value: "234 (0) 818 5002 210",
       action: "Call Now",
     },
     {

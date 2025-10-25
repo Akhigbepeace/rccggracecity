@@ -27,10 +27,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-10 transition-colors duration-300 ${
-        scrolled ? "bg-white shadow-md" : "bg-transparent"
-      }`}
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${scrolled ? "bg-white shadow-md" : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
@@ -49,16 +48,15 @@ export default function Navbar() {
                 <Link
                   key={href}
                   href={href}
-                  className={`relative transition duration-300 font-medium ${
-                    !scrolled
-                      ? "text-white hover:text-gray-200"
-                      : "text-black hover:text-primary"
-                  } group`}
-                  // className={`relative transition duration-300 font-medium ${
-                  //   isHome && !scrolled
-                  //     ? "text-white hover:text-gray-200"
-                  //     : "text-black hover:text-primary"
-                  // } group`}
+                  className={`relative transition duration-300 font-medium ${!scrolled
+                    ? "text-white hover:text-gray-200"
+                    : "text-black hover:text-primary"
+                    } group`}
+                // className={`relative transition duration-300 font-medium ${
+                //   isHome && !scrolled
+                //     ? "text-white hover:text-gray-200"
+                //     : "text-black hover:text-primary"
+                // } group`}
                 >
                   {label}
                   <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary group-hover:w-full transition-all duration-300"></span>
@@ -70,11 +68,10 @@ export default function Navbar() {
           <div className="hidden md:flex items-center flex-shrink-0">
             <Link
               href="/workers-corner"
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
-                scrolled
-                  ? "bg-primary text-white hover:bg-primary/90 shadow-md"
-                  : "bg-white text-primary hover:bg-gray-100 shadow-lg"
-              }`}
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${scrolled
+                ? "bg-primary text-white hover:bg-primary/90 shadow-md"
+                : "bg-white text-primary hover:bg-gray-100 shadow-lg"
+                }`}
             >
               Worker&apos;s Corner
             </Link>
@@ -82,9 +79,8 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden transition-colors duration-300 ${
-              scrolled ? "text-black" : "text-white"
-            }`}
+            className={`md:hidden transition-colors duration-300 ${scrolled ? "text-black" : "text-white"
+              }`}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -119,6 +115,6 @@ export default function Navbar() {
           </div>
         </div>
       )}
-    </header>
+    </nav>
   );
 }

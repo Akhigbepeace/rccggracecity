@@ -109,7 +109,7 @@ const Footer = () => {
 
                 <div className="flex items-center gap-3">
                   <FaPhone size={18} className="text-primary flex-shrink-0" />
-                  <p className="text-gray-300 text-sm">+234 (0) 812 345 6789</p>
+                  <p className="text-gray-300 text-sm">+234 (0) 818 5002 210</p>
                 </div>
 
                 <Link href="mailto:gracecityzone@gmail.com" className="flex items-center gap-3">
