@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <HeroCarousel />
       <AboutSection />
-      <UpcomingEvents />
+      {/* <UpcomingEvents /> */}
       <ProgramsSection />
       <GallerySection />
       <ScriptureInspirationHub />
